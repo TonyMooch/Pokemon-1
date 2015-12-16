@@ -1,14 +1,9 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
 body {
   font-family: Arial, serif;
+  text-align: center;
+  text-transform: lowercase;
 }
 
 .container {
@@ -19,8 +14,6 @@ body {
   color: #000;
   font-size: 30px;
   font-weight: bold;
-  text-transform: lowercase;
-  text-align: center;
   margin-top: 60px;
 }
 
@@ -41,6 +34,7 @@ body {
   font-weight: 200;
   padding: 2px 10px;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .description {
@@ -106,23 +100,27 @@ body {
   -webkit-animation-timing-function: ease-out;  
 }
 
-.expandcollapse-heading-collapsed {
+.expandcollapse-heading {
   cursor: pointer;
   position: relative;
-  z-index: 100000000;
-  color: black; 
-  background-color: white;
-  
-}
-
-.expandcollapse-heading-expanded {
-  cursor: pointer;
-  z-index: 100000000;
-  position: relative;
-  color: white; 
 }
 
 .expandcollapse-item {
   overflow: hidden;
 }
+
+.pokemonInfo {
+  padding-top: 50px;
+}
+
+.pokemon {
+  width: 50px;
+  height: 50px;
+}
+
+.name, .type {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 

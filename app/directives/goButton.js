@@ -4,7 +4,10 @@ app.directive('goButton', function() {
     scope: {},
     templateUrl: 'directives/goButton.html',
     link: function(scope, element, attrs) {
-      scope.buttonText = "go!";
+      scope.buttonText = "go!",
+      scope.showInfo = function() {
+        window.location = "#/pokeResult"
+      }
     }
   };
 });

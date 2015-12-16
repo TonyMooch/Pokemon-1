@@ -9,6 +9,9 @@
   <title>Battle Helper</title>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-animate.min.js"></script>
+  <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  
   <link rel="stylesheet" href="app.css">
 </head>
 <body>
@@ -22,13 +25,14 @@
 	      <h1>Pokemon Battle Helper</h1>
 	      
 	      <div class="expandcollapse-item">
-	        <div ng-click="active = !active" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}">
+	        <div ng-click="active = !active" class="expandcollapse-heading">
 	          <p class="description">how this works</p>
 	        </div>
 	        
 	        <div class="slideDown" ng-hide="active">
 	          <div class="descriptionContent">
-	            enter in a pokemon name and discover which types it is strong and weak against  
+	            <p>stuck grinding? let this help you fight your battles faster.<br> 
+	            enter in your opponent's pokemon name and this will tell you which type to battle with.</p>
 	          </div>
 	        </div>
 	      </div>
@@ -38,17 +42,14 @@
 	  
 	  
 	  
-	  <div style="text-align:center">
-	    <input ng-model="query" class="querybox" placeholder="enter pokemon name">
-	  </div>
-	  <go-button></go-button>
-	  
-	  
 	  <div class="main">
-	    <div class="container">
-	      <poke-info info="pokemon"></poke-info>
+        <div class="container">
+	      <input ng-model="query" class="querybox" placeholder="enter pokemon name">
+          <go-button></go-button>
 	    </div>
 	  </div>
+	  <div ng-view></div>
+
   </div>
 
   <!-- In production use:
@@ -56,7 +57,9 @@
   -->
   <script src="app.js"></script>
   <script src="controllers/PokeController.js"></script>
-  <script src="directives/pokeInfo.js"></script>
+  <!-- <script src="directives/pokeInfo.js"></script> -->
+  <script src="views/pokeInfo.js"></script>
   <script src="directives/goButton.js"></script>
+  <script src="services/services.js"></script>
 </body>
 </html>

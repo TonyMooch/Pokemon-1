@@ -1,0 +1,35 @@
+<div class="pokemonInfo">
+
+<img ng-src="{{ info.image }}" class="pokemon">
+
+<h2 class="name">{{ info.name }}</h2>
+<p class="type">{{ info.type }}</p>
+
+<table border="1" align="center">
+  <tr>
+    <th colspan="2"> Strengths </th>
+  </tr>
+  <tr>
+    <td>2x damage to:</td>
+    <td>{{ info.tx_damage_to.join(', ') }}</td>
+  </tr>
+  <tr>
+    <td>1/2 damage from:</td>
+    <td> {{ info.half_damage_from.join(', ')}}</td>
+  </tr>
+  <tr>
+    <th colspan="2"> Weaknesses </th>
+  </tr>
+  <tr>
+    <td>1/2 damage to:</td>
+    <td> {{ info.half_damage_to.join(', ') }}</td>
+  </tr>
+  <tr>
+    <td>2x damage from:</td>
+    <td>{{ info.tx_damage_from.join(', ') }}</td>
+  </tr>  
+</table>
+
+<p>Battle with: {{ info.battle }}</p>
+
+</div>

@@ -1,0 +1,10 @@
+{
+     "name": "Pikachu",
+     "type": "Electric",
+     "image": "img/pikachu.png",
+     "battle": "ground",
+     "tx_damage_to": ["water","flying"],
+     "half_damage_from": ["steel", "flying", "electric"],
+     "half_damage_to": ["dragon", "grass", "electric", "ground"],
+     "tx_damage_from": ["ground"]
+}
